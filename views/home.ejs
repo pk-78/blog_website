@@ -1,0 +1,35 @@
+<%- include('partials/header') -%>
+
+
+<h1>Home bar</h1>
+
+<p><%= homefirstcontent %></p>
+
+
+
+
+<div>
+    <!-- <% for(let i=0;i<  addedcompose.length ;i++){ %>
+
+        <div class="item">
+            <h2><%= addedcompose[i].titleContent %></h2>
+
+            <h4><%= addedcompose[i].postContent %></h4>
+        </div>
+
+    <% } %> -->
+
+    <% addedcompose.forEach(function(element){ %>
+        
+        <% let myString =element.postContent %>
+        <% let truncatedString = myString.substring(0,100) %>
+       
+         <h2><%= element.titleContent %></h2>  
+         <h4><%= truncatedString %>.... <a href="/post/<%= element.titleContent %>">Read More</a></h4>
+
+    <% }); %>
+</div>
+
+
+
+<%- include('partials/footer') -%>
