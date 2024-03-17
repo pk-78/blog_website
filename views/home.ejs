@@ -1,31 +1,23 @@
 <%- include('partials/header') -%>
 
 
-<h1>Home bar</h1>
+<h1 class="homebar mainheading">Home bar</h1>
 
-<p><%= homefirstcontent %></p>
-
-
+<p class="mainheaddetail"><%= homefirstcontent %></p>
 
 
-<div>
-    <!-- <% for(let i=0;i<  addedcompose.length ;i++){ %>
 
-        <div class="item">
-            <h2><%= addedcompose[i].titleContent %></h2>
 
-            <h4><%= addedcompose[i].postContent %></h4>
-        </div>
-
-    <% } %> -->
+<div class="homepagepost">
+    
 
     <% addedcompose.forEach(function(element){ %>
         
-        <% let myString =element.postContent %>
+        <% let myString =element.post %>
         <% let truncatedString = myString.substring(0,100) %>
        
-         <h2><%= element.titleContent %></h2>  
-         <h4><%= truncatedString %>.... <a href="/post/<%= element.titleContent %>">Read More</a></h4>
+         <h2><%= element.title %></h2>  
+         <h4><%= truncatedString %>.... <a href="/post/<%= element._id %>">Read More</a></h4>
 
     <% }); %>
 </div>
