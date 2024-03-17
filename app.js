@@ -160,6 +160,10 @@ app.get("/post/:postId",function(req,res){
 })
 
 
+<<<<<<< HEAD
 app.listen(process.env.PORT|| 3000, function() {
+=======
+app.listen(process.env.PORT || 3000, function() {
+>>>>>>> 7deb9202f8fbee71e333d5c23303006097c9c9c3
   console.log("Server started on port 3000");
 });
